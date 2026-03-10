@@ -35,11 +35,3 @@ By building this with React, I practiced:
 * Managing component state with the `useState` hook.
 * Implementing conditional rendering for UI feedback.
 * Using Tailwind CSS classes to build a responsive, aesthetic interface without writing custom CSS files.
-
-**Author:** Saiful Islam 🚀
-
-*Exploring the power of React and modern web ecosystems.*
-
----
-
-**Would you like me to help you add a "Save History" feature using `localStorage` so your count doesn't disappear when you refresh?**

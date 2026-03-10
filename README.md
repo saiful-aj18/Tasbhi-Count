@@ -36,8 +36,6 @@ By building this with React, I practiced:
 * Implementing conditional rendering for UI feedback.
 * Using Tailwind CSS classes to build a responsive, aesthetic interface without writing custom CSS files.
 
----
-
 **Author:** Saiful Islam 🚀
 
 *Exploring the power of React and modern web ecosystems.*

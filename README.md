@@ -1,4 +1,4 @@
-# 📿 Digital Tasbih Counter (React Edition)
+# 📿 Digital Tasbih Counter 
 
 A modern, high-performance digital counter built with **React** and **Tailwind CSS**. This application provides a seamless, lightning-fast counting experience with a sleek UI and responsive design.
 

@@ -1,11 +1,3 @@
-# Tasbhi-Count
- I build a Digital Tasbhi Counter web based application with Tailwind &amp; React.
-That’s a great upgrade! Moving from Vanilla JS to **React** and **Tailwind CSS** makes your code much more modular and easier to scale.
-
-Since you are using React, your `README.md` should reflect that modern setup. Here is an updated version that highlights your use of **Hooks** (like `useState`) and **Utility-first styling**.
-
----
-
 # 📿 Digital Tasbih Counter (React Edition)
 
 A modern, high-performance digital counter built with **React** and **Tailwind CSS**. This application provides a seamless, lightning-fast counting experience with a sleek UI and responsive design.

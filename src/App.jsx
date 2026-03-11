@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Tasbih() {
 
@@ -300,6 +301,8 @@ ${i<count?"bg-amber-400":"bg-white/20"}`}
 رَمَضَان مُبَارَك
 </footer>
 <span className="text-gray-500 text-sm">Design by saiful</span>
+
+<Analytics />
 
 </div>
 

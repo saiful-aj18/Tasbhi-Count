@@ -82,7 +82,6 @@ export default function Tasbih() {
 
   const today = new Date().toISOString().slice(0, 10);
 
-  // ১. প্রথমে স্ট্রাক বা দিন গণনার ফাংশনটি ডিক্লেয়ার করা হলো (যাতে উপরের এররটি আর না আসে)
   const calculateStreak = useCallback(() => {
     let days = 0;
 
@@ -236,7 +235,7 @@ export default function Tasbih() {
           <button
             onClick={increment}
             disabled={count >= dhikr.target}
-            className={`absolute w-24 h-24 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-700 shadow-2xl active:scale-90 transition ${count >= dhikr.target ? "opacity-50" : ""}`}
+            className={`absolute w-24 h-24 rounded-full flex items-center justify-center bg-gradient-to-br from-cyan-400 to-indigo-700 shadow-2xl active:scale-90 transition ${count >= dhikr.target ? "opacity-50" : ""}`}
           >
             {ripple && (
               <span className="absolute w-24 h-24 rounded-full bg-white/30 animate-ping"></span>
@@ -254,7 +253,7 @@ export default function Tasbih() {
         <div className="flex justify-center gap-4 mt-4">
           <button
             onClick={reset}
-            className="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 text-sm"
+            className="px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 text-red-100 text-sm"
           >
             Reset
           </button>
@@ -274,10 +273,10 @@ export default function Tasbih() {
       {/* stats */}
       <div className="mt-6 text-sm text-gray-300 text-center">
         <p>Total Dhikr: <span className="text-amber-400">{total}</span></p>
-        <p>Daily Streak: <span className="text-green-400">{streak} days</span></p>
+        <p>Daily Streak: <span className="text-teal-500">{streak} days</span></p>
       </div>
 
-      <footer className="absolute bottom-12 text-lg text-amber-300 font-[Amiri]">
+      <footer className="absolute bottom-15 text-lg text-amber-300 font-[Amiri]">
         رَمَضَان مُبَارَك
       </footer>
       <span className="text-gray-500 text-sm">Design by saiful</span>

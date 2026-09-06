@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
+<<<<<<< HEAD
+=======
+import { Analytics } from "@vercel/analytics/react";
+>>>>>>> 10d5711aa13507b3105271ba592f72be705cdccf
 
 export default function Tasbih() {
 
@@ -166,7 +170,11 @@ opacity:Math.random()
 <div className="absolute top-10 right-10 w-20 h-20 bg-yellow-400 rounded-full blur-md opacity-80"></div>
 
 <h1 className="text-3xl text-amber-300 mb-6 tracking-wide">
+<<<<<<< HEAD
 Lets Dhikr ✦
+=======
+Ramadan Kareem ✦
+>>>>>>> 10d5711aa13507b3105271ba592f72be705cdccf
 </h1>
 
 {/* dhikr selector */}
@@ -292,15 +300,28 @@ ${i<count?"bg-amber-400":"bg-white/20"}`}
 
 <p>Total Dhikr: <span className="text-amber-400">{total}</span></p>
 
+<<<<<<< HEAD
 <p>Daily Streak: <span className="text-green-400 mt-2">{streak} days</span></p>
 
 </div>
 
 <footer className="absolute bottom-14 text-lg text-amber-300 font-[Amiri]">
+=======
+<p>Daily Streak: <span className="text-green-400">{streak} days</span></p>
+
+</div>
+
+<footer className="absolute bottom-6 text-lg text-amber-300 font-[Amiri]">
+>>>>>>> 10d5711aa13507b3105271ba592f72be705cdccf
 رَمَضَان مُبَارَك
 </footer>
 <span className="text-gray-500 text-sm">Design by saiful</span>
 
+<<<<<<< HEAD
+=======
+<Analytics />
+
+>>>>>>> 10d5711aa13507b3105271ba592f72be705cdccf
 </div>
 
 );

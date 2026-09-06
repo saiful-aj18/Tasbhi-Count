@@ -181,7 +181,7 @@ export default function Tasbih() {
       <div className="absolute top-10 right-10 w-20 h-20 bg-yellow-400 rounded-full blur-md opacity-80"></div>
 
       <h1 className="text-3xl text-amber-300 mb-6 tracking-wide">
-        Ramadan Kareem ✦
+        Let's Dhikr ✦
       </h1>
 
       {/* dhikr selector */}

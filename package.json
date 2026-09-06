@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
+<<<<<<< HEAD
+=======
     "@vercel/analytics": "^2.0.0",
+>>>>>>> 10d5711aa13507b3105271ba592f72be705cdccf
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 "name":"Digital Tasbih",
 "short_name":"Tasbih",
@@ -12,4 +13,20 @@
 "type":"image/png"
 }
 ]
+=======
+{
+"name":"Digital Tasbih",
+"short_name":"Tasbih",
+"display":"standalone",
+"start_url":"/",
+"background_color":"#0f1b2d",
+"theme_color":"#0f1b2d",
+"icons":[
+{
+"src":"/icon.png",
+"sizes":"192x192",
+"type":"image/png"
+}
+]
+>>>>>>> 10d5711aa13507b3105271ba592f72be705cdccf
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
+const SMART_LINK = "https://asiafilm.org/4/95858aaa0d16ff7c1b6e6da7661f576b";
+
 const starPositions = [
   { top: "12%", left: "85%", opacity: 0.8 },
   { top: "25%", left: "14%", opacity: 0.5 },
@@ -34,31 +36,37 @@ const dhikrList = [
 
 /* ---------------- ADS ---------------- */
 
-// 320x50 Banner (iframe er vitore cholbe, tai React e safe)
+// 320x50 Banner (direct load)
 function BannerAd() {
-  const srcDoc = `<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;background:transparent;overflow:hidden}</style></head><body>
-<script>
-  atOptions = {
-    'key' : '50f3a0fa3f40545508d5e8cf972c44f7',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-<\/script>
-<script src="https://bauval.org/22/50f3a0fa3f40545508d5e8cf972c44f7"><\/script>
-</body></html>`;
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const container = ref.current;
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    window.atOptions = {
+      key: "50f3a0fa3f40545508d5e8cf972c44f7",
+      format: "iframe",
+      height: 50,
+      width: 320,
+      params: {}
+    };
+
+    const script = document.createElement("script");
+    script.src = "https://bauval.org/22/50f3a0fa3f40545508d5e8cf972c44f7";
+    script.async = true;
+    container.appendChild(script);
+
+    return () => {
+      container.innerHTML = "";
+    };
+  }, []);
 
   return (
     <div className="w-full flex justify-center my-4">
-      <iframe
-        title="banner-ad"
-        srcDoc={srcDoc}
-        width="320"
-        height="50"
-        scrolling="no"
-        style={{ border: 0, maxWidth: "100%" }}
-      />
+      <div ref={ref} style={{ minWidth: 320, minHeight: 50, maxWidth: "100%" }} />
     </div>
   );
 }
@@ -100,6 +108,21 @@ function SocialBarAd() {
     return () => script.remove();
   }, []);
   return null;
+}
+
+// Smart Link: clear label shoho "Support Us" button
+function SupportButton() {
+  return (
+    <a
+      href={SMART_LINK}
+      target="_blank"
+      rel="noopener noreferrer sponsored"
+      className="mt-5 inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-sm font-semibold shadow-lg hover:scale-105 active:scale-95 transition"
+    >
+      <span>❤</span>
+      <span>Support Us</span>
+    </a>
+  );
 }
 
 /* ---------------- MAIN APP ---------------- */
@@ -317,6 +340,9 @@ export default function Tasbih() {
           <p>Total Dhikr: <span className="text-amber-400">{total}</span></p>
           <p>Daily Streak: <span className="text-teal-500">{streak} days</span></p>
         </div>
+
+        {/* SMART LINK (Support Us button) */}
+        <SupportButton />
 
         {/* ADS */}
         <BannerAd />
